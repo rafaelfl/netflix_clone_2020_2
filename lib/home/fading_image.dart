@@ -27,7 +27,10 @@ class FadingImage extends StatelessWidget {
             0, rect.height * factionallyStartFading, rect.width, rect.height));
       },
       blendMode: BlendMode.dstIn,
-      child: Image.asset(imageName),
+      child: Image.asset(
+        imageName,
+        fit: BoxFit.fitWidth,
+      ),
     );
   }
 }

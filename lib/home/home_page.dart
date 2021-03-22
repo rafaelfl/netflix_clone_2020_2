@@ -33,9 +33,12 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Container(
-        // Classe para fazer o "fading" na imagem
-        child: FadingImage("assets/images/main_banner.jpg"),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            FadingImage("assets/images/main_banner.jpg"),
+          ],
+        ),
       ),
     );
   }
