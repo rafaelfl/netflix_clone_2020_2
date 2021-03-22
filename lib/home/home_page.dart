@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:netflix_clone_2020_2/home/fading_image.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -33,7 +34,8 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Container(
-        child: Image.asset("assets/images/main_banner.jpg"),
+        // Classe para fazer o "fading" na imagem
+        child: FadingImage("assets/images/main_banner.jpg"),
       ),
     );
   }
