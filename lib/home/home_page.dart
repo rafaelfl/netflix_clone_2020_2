@@ -39,8 +39,36 @@ class HomePage extends StatelessWidget {
                   // a Stack se expande para ocupar todo o espaço
                   // do container pai
                   fit: StackFit.expand,
+                  alignment: Alignment.center,
                   children: [
                     FadingImage("assets/images/main_banner.jpg"),
+                    Align(
+                      alignment: Alignment.topCenter,
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            top: kToolbarHeight +
+                                MediaQuery.of(context).padding.top +
+                                10.0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text(
+                              "Séries",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "Filmes",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            Text(
+                              "Minha lista",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),
