@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone_2020_2/home/movie.dart';
 
 class MovieWidget extends StatelessWidget {
-  final String assetPath;
+  final Movie movie;
+  final void Function() onTap;
 
-  const MovieWidget(this.assetPath);
+  const MovieWidget(this.movie, {this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Image.asset(assetPath),
+    return InkWell(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Image.asset(movie.bannerPath),
+      ),
     );
   }
 }

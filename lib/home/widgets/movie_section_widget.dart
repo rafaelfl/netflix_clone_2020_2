@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone_2020_2/home/movie.dart';
 import 'package:netflix_clone_2020_2/home/widgets/movie_widget.dart';
 
 class MovieSectionWidget extends StatelessWidget {
   final String title;
-  final List<String> movieBannerPathList;
+  final List<Movie> movieBannerPathList;
 
   const MovieSectionWidget({
     Key key,
@@ -32,7 +33,17 @@ class MovieSectionWidget extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 itemCount: movieBannerPathList.length,
                 itemBuilder: (context, index) {
-                  return MovieWidget(movieBannerPathList[index]);
+                  return MovieWidget(
+                    movieBannerPathList[index],
+                    onTap: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text(
+                              "O filme clicado foi: ${movieBannerPathList[index]}"),
+                        ),
+                      );
+                    },
+                  );
                 }),
           )
         ],
