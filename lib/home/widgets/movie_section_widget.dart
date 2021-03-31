@@ -4,12 +4,12 @@ import 'package:netflix_clone_2020_2/home/widgets/movie_widget.dart';
 
 class MovieSectionWidget extends StatelessWidget {
   final String title;
-  final List<Movie> movieBannerPathList;
+  final List<Movie> movieList;
 
   const MovieSectionWidget({
     Key key,
     @required this.title,
-    @required this.movieBannerPathList,
+    @required this.movieList,
   }) : super(key: key);
 
   @override
@@ -31,15 +31,15 @@ class MovieSectionWidget extends StatelessWidget {
             height: 200,
             child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                itemCount: movieBannerPathList.length,
+                itemCount: movieList.length,
                 itemBuilder: (context, index) {
                   return MovieWidget(
-                    movieBannerPathList[index],
+                    movieList[index],
                     onTap: () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text(
-                              "O filme clicado foi: ${movieBannerPathList[index]}"),
+                          content:
+                              Text("O filme clicado foi: ${movieList[index]}"),
                         ),
                       );
                     },
