@@ -36,12 +36,15 @@ class MovieSectionWidget extends StatelessWidget {
                   return MovieWidget(
                     movieList[index],
                     onTap: () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          content:
-                              Text("O filme clicado foi: ${movieList[index]}"),
-                        ),
-                      );
+                      // ScaffoldMessenger.of(context).showSnackBar(
+                      //   SnackBar(
+                      //     content:
+                      //         Text("O filme clicado foi: ${movieList[index]}"),
+                      //   ),
+                      // );
+
+                      Navigator.pushNamed(context, "/details",
+                          arguments: movieList[index]);
                     },
                   );
                 }),

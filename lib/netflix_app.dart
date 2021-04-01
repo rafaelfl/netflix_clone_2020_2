@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone_2020_2/home/home_page.dart';
+import 'package:netflix_clone_2020_2/home/movie_details/movie_details_page.dart';
 
 class NetflixApp extends StatelessWidget {
   @override
@@ -11,7 +12,11 @@ class NetflixApp extends StatelessWidget {
         accentColor: Colors.green,
         textTheme: TextTheme(bodyText2: TextStyle(color: Colors.purple)),
       ),
-      home: HomePage(),
+      initialRoute: "/",
+      routes: {
+        "/": (context) => HomePage(),
+        "/details": (context) => MovieDetailsPage(),
+      },
     );
   }
 }
