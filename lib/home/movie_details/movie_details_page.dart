@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone_2020_2/home/movie.dart';
+import 'package:netflix_clone_2020_2/stores/watch_again_store.dart';
+import 'package:provider/provider.dart';
 
 class MovieDetailsPage extends StatelessWidget {
   @override
@@ -14,10 +16,18 @@ class MovieDetailsPage extends StatelessWidget {
             Text("Detalhes do filme: ${movie.title}"),
             TextButton(
               onPressed: () {
+                Provider.of<WatchAgainStore>(context, listen: false)
+                    .addMovie(movie);
+                print("Filme $movie assistido!");
+              },
+              child: Text("Assistir"),
+            ),
+            TextButton(
+              onPressed: () {
                 Navigator.pop(context);
               },
               child: Text("Voltar"),
-            )
+            ),
           ],
         ),
       ),
