@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone_2020_2/home/movie.dart';
+import 'package:netflix_clone_2020_2/model/movie.dart';
 
 class MovieWidget extends StatelessWidget {
   final Movie movie;
@@ -13,7 +13,7 @@ class MovieWidget extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Image.asset(movie.bannerPath),
+        child: Image.network(movie.bannerPath),
       ),
     );
   }

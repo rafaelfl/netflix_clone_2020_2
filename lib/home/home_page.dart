@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:netflix_clone_2020_2/home/movie.dart';
+import 'package:netflix_clone_2020_2/home/widgets/download_tab_widget.dart';
+import 'package:netflix_clone_2020_2/model/movie.dart';
 import 'package:netflix_clone_2020_2/home/widgets/action_button.dart';
 import 'package:netflix_clone_2020_2/home/widgets/fading_image.dart';
 import 'package:netflix_clone_2020_2/home/widgets/watch_again_widget.dart';
@@ -55,7 +56,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget downloadTab(BuildContext context) {
-    return Center(child: Text("implementar a tela de \"Downloads\""));
+    return DownloadTabWidget();
   }
 
   Widget startTab(BuildContext context) {

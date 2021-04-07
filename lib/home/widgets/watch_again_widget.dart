@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone_2020_2/home/movie.dart';
+import 'package:netflix_clone_2020_2/model/movie.dart';
 import 'package:netflix_clone_2020_2/home/widgets/movie_widget.dart';
 import 'package:netflix_clone_2020_2/stores/watch_again_store.dart';
 import 'package:provider/provider.dart';

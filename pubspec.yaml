@@ -24,6 +24,7 @@ dependencies:
   flutter:
     sdk: flutter
 
+  dio: ^4.0.0
   provider: ^5.0.0
 
 

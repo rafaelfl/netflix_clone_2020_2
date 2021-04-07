@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone_2020_2/home/movie.dart';
+import 'package:netflix_clone_2020_2/model/movie.dart';
 
 class WatchAgainStore extends ChangeNotifier {
   List<Movie> _list = [];
