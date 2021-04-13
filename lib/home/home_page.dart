@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:netflix_clone_2020_2/home/soon_tab_widget.dart';
 import 'package:netflix_clone_2020_2/home/widgets/download_tab_widget.dart';
 import 'package:netflix_clone_2020_2/model/movie.dart';
 import 'package:netflix_clone_2020_2/home/widgets/action_button.dart';
@@ -52,7 +53,7 @@ class HomePage extends StatelessWidget {
   }
 
   Widget soonTab(BuildContext context) {
-    return Center(child: Text("implementar a tela de \"Em breve\""));
+    return SoonTabWidget();
   }
 
   Widget downloadTab(BuildContext context) {
